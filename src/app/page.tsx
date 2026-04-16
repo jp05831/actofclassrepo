@@ -112,26 +112,29 @@ export default function HomePage() {
   </p>
 </div>
 
-            {/* BBB Accredited */}
+                        {/* BBB Accredited */}
             <div className="text-center">
-  <div className="mb-5 flex justify-center">
-    <a href="https://www.bbb.org/us/fl/fort-myers/profile/moving-companies/act-of-class-moving-storage-llc-0653-90222874" target="_blank" rel="noopener noreferrer">
-      <svg className="w-10 h-10" viewBox="0 0 80 80" fill="none">
-        <rect width="80" height="80" rx="8" fill="#00529b"/>
-        <text x="50%" y="38%" dominantBaseline="middle" textAnchor="middle" fill="white" fontSize="20" fontWeight="bold">BBB</text>
-        <text x="50%" y="66%" dominantBaseline="middle" textAnchor="middle" fill="#f3ca14" fontSize="9" fontWeight="600">ACCREDITED</text>
-      </svg>
-    </a>
-  </div>
+              <div className="mb-5 flex justify-center">
+                <a href="https://www.bbb.org/us/fl/fort-myers/profile/moving-companies/act-of-class-moving-storage-llc-0653-90222874" target="_blank" rel="noopener noreferrer">
+                  <svg className="w-10 h-10" viewBox="0 0 80 80" fill="none">
+                    <rect width="80" height="80" rx="8" fill="#00529b"/>
+                    <text x="50%" y="38%" dominantBaseline="middle" textAnchor="middle" fill="white" fontSize="20" fontWeight="bold">BBB</text>
+                    <text x="50%" y="66%" dominantBaseline="middle" textAnchor="middle" fill="#f3ca14" fontSize="9" fontWeight="600">ACCREDITED</text>
+                  </svg>
+                </a>
+              </div>
 
-  <h3 className="font-bold text-dark text-lg mb-2">
-    Licensed & Insured
-  </h3>
+              <h3 className="font-bold text-dark text-lg mb-2">
+                Licensed & Insured
+              </h3>
 
-  <p className="text-gray-600 text-sm">
-    Fully licensed and insured, giving you peace of mind every step of your move.
-  </p>
-</div>
+              <p className="text-gray-600 text-sm">
+                Fully licensed and insured, giving you peace of mind every step of your move.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Services Section */}
       <section className="py-16 lg:py-24 bg-white">
