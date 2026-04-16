@@ -14,7 +14,7 @@ export default function Hero({ title, subtitle, showCTA = true, backgroundImage 
       {backgroundImage ? (
         <>
           <div
-            className="absolute inset-0 bg-cover bg-bottom"
+            className="absolute inset-0 bg-cover bg-[center_78%]"
             style={{ backgroundImage: `url(${backgroundImage})` }}
           />
           <div className="absolute inset-0 bg-primary/75" />
