@@ -31,10 +31,10 @@ export default function Hero({ title, subtitle, showCTA = true, backgroundImage 
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
         <div className="max-w-3xl">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 drop-shadow-lg">
             {title}
           </h1>
-          <p className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed">
+          <p className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed drop-shadow-md">
             {subtitle}
           </p>
           {showCTA && (
