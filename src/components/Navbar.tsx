@@ -111,12 +111,19 @@ export default function Navbar() {
 
             <div className="flex items-center gap-5">
               <a
-                href="tel:+12395394761"
-                className="text-primary hover:text-accent transition font-bold text-2xl whitespace-nowrap flex items-center gap-1.5"
-              >
-                <svg className="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
-                (239) 539-4761
-              </a>
+  href="tel:+12395394761"
+  className="text-primary hover:text-accent transition font-bold text-xl whitespace-nowrap flex items-center gap-1.5 mt-[1px]"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-5 h-5 text-primary relative top-[1px]"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path d="M6.6 10.8a15.05 15.05 0 006.6 6.6l2.2-2.2a1 1 0 011-.24c1.12.37 2.33.56 3.6.56a1 1 0 011 1V21a1 1 0 01-1 1C10.3 22 2 13.7 2 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.27.19 2.48.56 3.6a1 1 0 01-.24 1l-2.22 2.2z"/>
+  </svg>
+  (239) 539-4761
+</a>
 
               <Link
                 href="/book-online"
