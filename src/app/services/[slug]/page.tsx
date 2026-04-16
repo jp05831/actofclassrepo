@@ -85,7 +85,7 @@ export default async function ServicePage({ params }: Props) {
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-6">
                 <div className="bg-gray-50 rounded-xl p-6 border border-gray-100">
-                  <h3 className="font-bold text-dark text-lg mb-4">Get a Free Quote</h3>
+                  <h3 className="font-bold text-dark text-lg mb-4">Get a Free Estimate</h3>
                   <ContactForm compact />
                 </div>
 
@@ -110,10 +110,10 @@ export default async function ServicePage({ params }: Props) {
                     Call us for immediate assistance with your move.
                   </p>
                   <a
-                    href="tel:+12390000000"
+                    href="tel:+12395394761"
                     className="block text-center bg-accent text-dark font-bold py-3 rounded-lg hover:bg-accent-light transition"
                   >
-                    📞 (239) 000-0000
+                    📞 (239) 539-4761
                   </a>
                 </div>
               </div>

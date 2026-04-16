@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { services } from "@/data/services";
 
@@ -14,12 +15,14 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0">
-            <span className="text-primary font-bold text-lg lg:text-xl leading-tight">
-              Act of Class
-              <span className="block text-xs lg:text-sm font-medium text-gray-600">
-                Moving & Storage
-              </span>
-            </span>
+            <Image
+              src="/images/logo.png"
+              alt="Act of Class Moving & Storage"
+              width={180}
+              height={60}
+              className="h-12 lg:h-14 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}

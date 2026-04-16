@@ -4,16 +4,30 @@ interface HeroProps {
   title: string;
   subtitle: string;
   showCTA?: boolean;
+  backgroundImage?: string;
 }
 
-export default function Hero({ title, subtitle, showCTA = true }: HeroProps) {
+export default function Hero({ title, subtitle, showCTA = true, backgroundImage }: HeroProps) {
   return (
-    <section className="relative bg-gradient-to-br from-primary to-primary-dark text-white overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-accent rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl" />
-      </div>
+    <section className="relative text-white overflow-hidden">
+      {/* Background */}
+      {backgroundImage ? (
+        <>
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${backgroundImage})` }}
+          />
+          <div className="absolute inset-0 bg-primary/75" />
+        </>
+      ) : (
+        <>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary-dark" />
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-10 left-10 w-72 h-72 bg-accent rounded-full blur-3xl" />
+            <div className="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl" />
+          </div>
+        </>
+      )}
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
         <div className="max-w-3xl">
@@ -27,15 +41,15 @@ export default function Hero({ title, subtitle, showCTA = true }: HeroProps) {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/book-online"
-                className="inline-flex items-center justify-center bg-accent text-dark font-bold px-8 py-4 rounded-lg hover:bg-accent-light transition shadow-lg text-lg"
+                className="inline-flex items-center justify-center bg-white text-primary font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition shadow-lg text-lg"
               >
-                Get a Free Quote
+                GET A FREE ESTIMATE
               </Link>
               <a
-                href="tel:+12390000000"
+                href="tel:+12395394761"
                 className="inline-flex items-center justify-center bg-white/10 backdrop-blur text-white font-bold px-8 py-4 rounded-lg hover:bg-white/20 transition border border-white/20 text-lg"
               >
-                📞 Call Now
+                📞 Call (239) 539-4761
               </a>
             </div>
           )}

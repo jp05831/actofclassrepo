@@ -48,7 +48,7 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
             type="tel"
             id="phone"
             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary/20 focus:border-primary transition outline-none"
-            placeholder="(239) 000-0000"
+            placeholder="(239) 539-4761"
           />
         </div>
         <div>

@@ -34,8 +34,8 @@ export default function Footer() {
               Family-owned and operated for over 20 years. BBB accredited. Serving Fort Myers and all of Southwest Florida.
             </p>
             <div className="space-y-2 text-sm">
-              <p>📍 Fort Myers, FL</p>
-              <p>📞 <a href="tel:+12390000000" className="hover:text-accent transition">(239) 000-0000</a></p>
+              <p>📍 2775 N Airport Rd #109, Fort Myers, FL 33907</p>
+              <p>📞 <a href="tel:+12395394761" className="hover:text-accent transition">(239) 539-4761</a></p>
             </div>
             {/* BBB Badge Placeholder */}
             <div className="mt-4 inline-block bg-gray-800 px-3 py-2 rounded text-xs text-gray-400">

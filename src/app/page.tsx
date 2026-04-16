@@ -16,11 +16,13 @@ export default function HomePage() {
     description:
       "Family-owned moving company in Fort Myers, FL with over 20 years of experience. Residential, apartment, furniture, luxury, and senior moving services.",
     url: "https://www.actofclassmoving.com",
-    telephone: "+12390000000",
+    telephone: "+12395394761",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "2775 N Airport Rd #109",
       addressLocality: "Fort Myers",
       addressRegion: "FL",
+      postalCode: "33907",
       addressCountry: "US",
     },
     areaServed: {
@@ -44,8 +46,9 @@ export default function HomePage() {
       />
 
       <Hero
-        title="Fort Myers' Most Trusted Moving Company"
-        subtitle="Family-owned for over 20 years. BBB accredited. From packing to storage, we handle every detail of your move with care and professionalism."
+        title="Act of Class Moving & Storage"
+        subtitle="Family-owned for over 20 years. From packing to storage, we handle every detail of your move with care and professionalism."
+        backgroundImage="/images/hero-bg.jpg"
       />
 
       {/* Services Section */}
@@ -137,14 +140,14 @@ export default function HomePage() {
                   <span className="text-2xl">📞</span>
                   <div>
                     <p className="font-semibold text-dark">Call Us</p>
-                    <a href="tel:+12390000000" className="text-primary hover:underline">(239) 000-0000</a>
+                    <a href="tel:+12395394761" className="text-primary hover:underline">(239) 539-4761</a>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">📍</span>
                   <div>
                     <p className="font-semibold text-dark">Location</p>
-                    <p className="text-gray-600">Fort Myers, FL</p>
+                    <p className="text-gray-600">2775 N Airport Rd #109, Fort Myers, FL 33907</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">

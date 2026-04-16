@@ -36,8 +36,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-dark">Phone</h3>
-                    <a href="tel:+12390000000" className="text-primary hover:underline text-lg">
-                      (239) 000-0000
+                    <a href="tel:+12395394761" className="text-primary hover:underline text-lg">
+                      (239) 539-4761
                     </a>
                   </div>
                 </div>
@@ -48,7 +48,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-dark">Location</h3>
-                    <p className="text-gray-600">Fort Myers, FL</p>
+                    <p className="text-gray-600">2775 N Airport Rd #109</p>
+                    <p className="text-gray-600">Fort Myers, FL 33907</p>
                     <p className="text-gray-500 text-sm">Serving Lee County & Collier County</p>
                   </div>
                 </div>
