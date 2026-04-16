@@ -104,13 +104,16 @@ export default function HomePage() {
       <TestimonialSlider />
 
       {/* Areas Served */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section
+  className="py-16 lg:py-24 bg-cover bg-center"
+  style={{ backgroundImage: "url('/images/areas-bg.jpg')" }}
+>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-dark text-center mb-4">
             Areas We Serve
           </h2>
           <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Proudly serving communities throughout Lee County and Collier County in Southwest Florida.
+            Serving communities across Southwest Florida with dependable moving services.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {topLocations.map((loc) => (
