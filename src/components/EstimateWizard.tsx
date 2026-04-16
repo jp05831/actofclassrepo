@@ -151,8 +151,8 @@ export default function EstimateWizard() {
       <div className="bg-primary px-6 py-4">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-white font-bold text-lg">Free Moving Estimate</h2>
-            <p className="text-white/70 text-xs mt-0.5">No obligation · Takes 2 minutes</p>
+            <h2 className="text-white font-bold text-lg">Start Your Quote </h2>
+            <p className="text-white/70 text-xs mt-0.5">No obligation · Takes 1 minute</p>
           </div>
           <div className="flex items-center gap-1.5 bg-white/15 backdrop-blur rounded-lg px-3 py-1.5">
             <div className="flex">
@@ -177,8 +177,8 @@ export default function EstimateWizard() {
         {/* Step 1: Contact Info */}
         {step === 1 && (
           <div className="max-w-md mx-auto">
-            <h3 className="text-lg font-bold text-dark mb-1">Get Your Free Estimate</h3>
-            <p className="text-gray-400 text-sm mb-5">Tell us how to reach you.</p>
+            <h3 className="text-lg font-bold text-dark mb-1">Tell Us About Your Move</h3>
+            <p className="text-gray-400 text-sm mb-5">Start with your contact details below.</p>
             <div className="space-y-3">
               <div>
                 <label className="block text-xs font-medium text-gray-500 mb-1">Full Name *</label>
