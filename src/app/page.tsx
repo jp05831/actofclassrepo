@@ -1,8 +1,9 @@
 import Hero from "@/components/Hero";
+import EstimateWizard from "@/components/EstimateWizard";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialSlider from "@/components/TestimonialSlider";
-import ContactForm from "@/components/ContactForm";
 import LocationCard from "@/components/LocationCard";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { services } from "@/data/services";
 import { locations } from "@/data/locations";
 
@@ -51,6 +52,33 @@ export default function HomePage() {
         backgroundImage="/images/hero-bg.jpg"
       />
 
+      {/* Estimate Form - overlaps hero */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-8">
+        <EstimateWizard />
+      </div>
+
+      {/* Why Choose Us */}
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-dark text-center mb-12">
+            Why Choose Act of Class?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { title: "Family-Owned", desc: "Not a franchise — a real family business where your move reflects directly on our name." },
+              { title: "20+ Years Experience", desc: "Two decades of moving families across Southwest Florida with care and professionalism." },
+              { title: "40,000 Sq Ft Storage", desc: "Climate-controlled storage facility to keep your belongings safe between moves." },
+              { title: "BBB Accredited", desc: "Recognized by the Better Business Bureau for our commitment to customer satisfaction." },
+            ].map((item) => (
+              <div key={item.title} className="text-center">
+                <h3 className="font-bold text-dark text-lg mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,34 +92,10 @@ export default function HomePage() {
             {services.map((s) => (
               <ServiceCard
                 key={s.slug}
-                icon={s.icon}
                 name={s.name}
                 description={s.shortDescription}
                 href={`/services/${s.slug}`}
               />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-dark text-center mb-12">
-            Why Choose Act of Class?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: "👨‍👩‍👧‍👦", title: "Family-Owned", desc: "Not a franchise — a real family business where your move reflects directly on our name." },
-              { icon: "🏆", title: "20+ Years Experience", desc: "Two decades of moving families across Southwest Florida with care and professionalism." },
-              { icon: "🏢", title: "40,000 Sq Ft Storage", desc: "Climate-controlled storage facility to keep your belongings safe between moves." },
-              { icon: "✅", title: "BBB Accredited", desc: "Recognized by the Better Business Bureau for our commitment to customer satisfaction." },
-            ].map((item) => (
-              <div key={item.title} className="text-center">
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="font-bold text-dark text-lg mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
-              </div>
             ))}
           </div>
         </div>
@@ -127,40 +131,26 @@ export default function HomePage() {
       {/* Contact Section */}
       <section className="py-16 lg:py-24 bg-gray-50" id="contact">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-4">
-                Get Your Free Estimate
-              </h2>
-              <p className="text-gray-600 mb-6">
-                Ready to move? Fill out the form and we&apos;ll get back to you with a free, no-obligation estimate. Or call us directly.
-              </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">📞</span>
-                  <div>
-                    <p className="font-semibold text-dark">Call Us</p>
-                    <a href="tel:+12395394761" className="text-primary hover:underline">(239) 539-4761</a>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">📍</span>
-                  <div>
-                    <p className="font-semibold text-dark">Location</p>
-                    <p className="text-gray-600">2775 N Airport Rd #109, Fort Myers, FL 33907</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">⏰</span>
-                  <div>
-                    <p className="font-semibold text-dark">Hours</p>
-                    <p className="text-gray-600">Mon-Sat: 7:00 AM - 7:00 PM</p>
-                  </div>
-                </div>
-              </div>
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-gray-600 mb-6">
+              Call us today for a free, no-obligation estimate or use the form above to get started online.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="tel:+12395394761"
+                className="inline-flex items-center justify-center bg-primary text-white font-bold px-8 py-4 rounded-lg hover:bg-primary-dark transition shadow-sm text-lg"
+              >
+                Call (239) 539-4761
+              </a>
+              <span className="text-gray-400">or</span>
+              <ScrollToTopButton />
             </div>
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 lg:p-8">
-              <ContactForm compact />
+            <div className="mt-8 text-sm text-gray-500">
+              <p>2775 N Airport Rd #109, Fort Myers, FL 33907</p>
+              <p>Mon-Sat: 7:00 AM - 7:00 PM</p>
             </div>
           </div>
         </div>
