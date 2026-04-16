@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Phone number hover in navbar */
+a[href="tel:+12395394761"]:hover span {
+  filter: brightness(1.5) saturate(2);
+}
+
 @theme {
   --color-primary: #812f25;
   --color-primary-light: #a04035;

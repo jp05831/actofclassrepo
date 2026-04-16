@@ -28,93 +28,103 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-6">
-            {/* Services Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
-            >
-              <button className="text-dark hover:text-primary transition font-medium flex items-center gap-1">
-                Services
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-0 pt-2">
-                  <div className="bg-white rounded-lg shadow-lg border border-gray-100 py-2 w-56">
-                    {services.map((s) => (
-                      <Link
-                        key={s.slug}
-                        href={`/services/${s.slug}`}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/5 hover:text-primary transition"
-                      >
-                        {s.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Areas Served Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setAreasOpen(true)}
-              onMouseLeave={() => setAreasOpen(false)}
-            >
-              <Link href="/areas-served" className="text-dark hover:text-primary transition font-medium flex items-center gap-1">
-                Areas Served
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </Link>
-              {areasOpen && (
-                <div className="absolute top-full left-0 mt-0 pt-2">
-                  <div className="bg-white rounded-lg shadow-lg border border-gray-100 py-2 w-64 max-h-96 overflow-y-auto">
-                    {locations.map((loc) => (
-                      <Link
-                        key={loc.slug}
-                        href={`/areas-served/${loc.slug}`}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/5 hover:text-primary transition"
-                      >
-                        {loc.name}, FL
-                      </Link>
-                    ))}
-                    <div className="border-t border-gray-100 mt-1 pt-1">
-                      <Link
-                        href="/areas-served"
-                        className="block px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/5 transition"
-                      >
-                        View All Areas →
-                      </Link>
+          <div className="hidden lg:flex items-center justify-between flex-1 ml-8">
+            <div className="flex items-center gap-10">
+              {/* Services Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >
+                <button className="text-dark hover:text-primary transition font-medium text-[15px] flex items-center gap-1">
+                  Services
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {servicesOpen && (
+                  <div className="absolute top-full left-0 mt-0 pt-2">
+                    <div className="bg-primary rounded-lg shadow-lg py-2 w-56">
+                      {services.map((s) => (
+                        <Link
+                          key={s.slug}
+                          href={`/services/${s.slug}`}
+                          className="block px-4 py-2 text-sm text-white/90 hover:bg-accent hover:text-dark transition"
+                        >
+                          {s.name}
+                        </Link>
+                      ))}
                     </div>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
+
+              {/* Areas Served Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setAreasOpen(true)}
+                onMouseLeave={() => setAreasOpen(false)}
+              >
+                <Link href="/areas-served" className="text-dark hover:text-primary transition font-medium text-[15px] flex items-center gap-1">
+                  Areas Served
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </Link>
+                {areasOpen && (
+                  <div className="absolute top-full left-0 mt-0 pt-2">
+                    <div className="bg-primary rounded-lg shadow-lg py-3 px-2 w-[480px]">
+                      <div className="grid grid-cols-3 gap-0.5">
+                        {locations.map((loc) => (
+                          <Link
+                            key={loc.slug}
+                            href={`/areas-served/${loc.slug}`}
+                            className="block px-3 py-1.5 text-sm text-white/90 hover:bg-accent hover:text-dark rounded transition"
+                          >
+                            {loc.name}
+                          </Link>
+                        ))}
+                      </div>
+                      <div className="border-t border-white/20 mt-2 pt-2 px-1">
+                        <Link
+                          href="/areas-served"
+                          className="block px-3 py-1.5 text-sm font-semibold text-accent hover:bg-accent hover:text-dark rounded transition"
+                        >
+                          View All Areas →
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <Link href="/about" className="text-dark hover:text-primary transition font-medium text-[15px]">
+                About
+              </Link>
+              <Link href="/contact" className="text-dark hover:text-primary transition font-medium text-[15px]">
+                Contact
+              </Link>
+              <Link href="/blog" className="text-dark hover:text-primary transition font-medium text-[15px]">
+                Blog
+              </Link>
             </div>
 
-            <Link href="/about" className="text-dark hover:text-primary transition font-medium">
-              About
-            </Link>
-            <Link href="/contact" className="text-dark hover:text-primary transition font-medium">
-              Contact
-            </Link>
-            <Link href="/blog" className="text-dark hover:text-primary transition font-medium">
-              Blog
-            </Link>
+            <div className="flex items-center gap-5">
+              <a
+                href="tel:+12395394761"
+                className="text-primary hover:text-accent transition font-bold text-xl whitespace-nowrap flex items-center gap-1.5"
+              >
+                <span className="text-primary">📞</span>
+                (239) 539-4761
+              </a>
 
-            <a href="tel:+12395394761" className="text-dark hover:text-primary transition font-medium whitespace-nowrap">
-              (239) 539-4761
-            </a>
-
-            <Link
-              href="/book-online"
-              className="bg-primary text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-primary-dark transition shadow-sm whitespace-nowrap"
-            >
-              BOOK NOW
-            </Link>
+              <Link
+                href="/book-online"
+                className="bg-primary text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-primary-dark transition shadow-sm whitespace-nowrap"
+              >
+                BOOK NOW
+              </Link>
+            </div>
           </div>
 
           {/* Mobile Hamburger */}
@@ -186,8 +196,8 @@ export default function Navbar() {
             <Link href="/blog" className="block font-medium text-dark hover:text-primary" onClick={() => setMobileOpen(false)}>
               Blog
             </Link>
-            <a href="tel:+12395394761" className="block font-medium text-primary">
-              (239) 539-4761
+            <a href="tel:+12395394761" className="block font-bold text-primary text-lg">
+              📞 (239) 539-4761
             </a>
             <Link
               href="/book-online"
