@@ -210,7 +210,7 @@ export default function HomePage() {
             </div>
             <div className="mt-8 text-sm text-gray-500">
               <p>2775 N Airport Rd #109, Fort Myers, FL 33907</p>
-              <p>Mon-Sat: 7:00 AM - 7:00 PM</p>
+              <p>Mon–Sat: 7 AM – 7 PM &nbsp;|&nbsp; Sun: 10 AM – 4 PM</p>
             </div>
           </div>
         </div>

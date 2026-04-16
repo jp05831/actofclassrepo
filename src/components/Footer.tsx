@@ -70,11 +70,11 @@ export default function Footer() {
               <Image
                 src="/images/logo.png"
                 alt="Act of Class Moving & Storage"
-                width={140}
-                height={47}
-                className="h-10 w-auto brightness-0 invert"
+                width={180}
+                height={60}
+                className="h-12 lg:h-14 w-auto"
               />
-              <div className="h-8 w-px bg-gray-700" />
+              <div className="h-10 w-px bg-gray-700" />
               <a href="tel:+12395394761" className="text-white font-bold text-lg hover:text-accent transition whitespace-nowrap">
                 (239) 539-4761
               </a>
