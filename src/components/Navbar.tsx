@@ -28,15 +28,15 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center justify-between flex-1 ml-8">
-            <div className="flex items-center gap-10">
+          <div className="hidden lg:flex items-center justify-end flex-1 ml-12">
+            <div className="flex items-center gap-12 mr-auto ml-8">
               {/* Services Dropdown */}
               <div
                 className="relative"
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
-                <button className="text-dark hover:text-primary transition font-medium text-[15px] flex items-center gap-1">
+                <button className="text-dark hover:text-primary transition font-semibold text-base flex items-center gap-1">
                   Services
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -65,7 +65,7 @@ export default function Navbar() {
                 onMouseEnter={() => setAreasOpen(true)}
                 onMouseLeave={() => setAreasOpen(false)}
               >
-                <Link href="/areas-served" className="text-dark hover:text-primary transition font-medium text-[15px] flex items-center gap-1">
+                <Link href="/areas-served" className="text-dark hover:text-primary transition font-semibold text-base flex items-center gap-1">
                   Areas Served
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -98,37 +98,30 @@ export default function Navbar() {
                 )}
               </div>
 
-              <Link href="/about" className="text-dark hover:text-primary transition font-medium text-[15px]">
+              <Link href="/about" className="text-dark hover:text-primary transition font-semibold text-base">
                 About
               </Link>
-              <Link href="/contact" className="text-dark hover:text-primary transition font-medium text-[15px]">
+              <Link href="/contact" className="text-dark hover:text-primary transition font-semibold text-base">
                 Contact
               </Link>
-              <Link href="/blog" className="text-dark hover:text-primary transition font-medium text-[15px]">
+              <Link href="/blog" className="text-dark hover:text-primary transition font-semibold text-base">
                 Blog
               </Link>
             </div>
 
-           <div className="flex items-center gap-5">
-  <a
-    href="tel:+12395394761"
-    className="text-primary hover:text-accent transition font-bold text-xl whitespace-nowrap flex items-center gap-1.5"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-5 h-5 text-primary"
-      fill="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path d="M6.6 10.8a15.05 15.05 0 006.6 6.6l2.2-2.2a1 1 0 011-.24c1.12.37 2.33.56 3.6.56a1 1 0 011 1V21a1 1 0 01-1 1C10.3 22 2 13.7 2 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.27.19 2.48.56 3.6a1 1 0 01-.24 1l-2.22 2.2z"/>
-    </svg>
-    (239) 539-4761
-  </a>
+            <div className="flex items-center gap-5">
+              <a
+                href="tel:+12395394761"
+                className="text-primary hover:text-accent transition font-bold text-2xl whitespace-nowrap flex items-center gap-1.5"
+              >
+                <svg className="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+                (239) 539-4761
+              </a>
 
-  <Link
-    href="/book-online"
-    className="bg-primary text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-primary-dark transition shadow-sm whitespace-nowrap"
-  >
+              <Link
+                href="/book-online"
+                className="bg-primary text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-primary-dark transition shadow-sm whitespace-nowrap"
+              >
                 BOOK NOW
               </Link>
             </div>
@@ -204,7 +197,7 @@ export default function Navbar() {
               Blog
             </Link>
             <a href="tel:+12395394761" className="block font-bold text-primary text-lg">
-              📞 (239) 539-4761
+              📞 CALL (239) 539-4761
             </a>
             <Link
               href="/book-online"

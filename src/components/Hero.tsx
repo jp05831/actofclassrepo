@@ -49,8 +49,7 @@ export default function Hero({ title, subtitle, showCTA = true, backgroundImage 
                 href="tel:+12395394761"
                 className="inline-flex items-center justify-center bg-white/10 backdrop-blur text-white font-bold px-8 py-4 rounded-lg hover:bg-white/20 transition border border-white/20 text-lg"
               >
-                <svg className="w-5 h-5 mr-1 inline" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
-                Call (239) 539-4761
+                CALL (239) 539-4761
               </a>
             </div>
           )}

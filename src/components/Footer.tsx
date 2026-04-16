@@ -37,10 +37,21 @@ export default function Footer() {
               <p>📍 2775 N Airport Rd #109, Fort Myers, FL 33907</p>
               <p>📞 <a href="tel:+12395394761" className="hover:text-accent transition">(239) 539-4761</a></p>
             </div>
-            {/* BBB Badge Placeholder */}
-            <div className="mt-4 inline-block bg-gray-800 px-3 py-2 rounded text-xs text-gray-400">
-              BBB Accredited Business
-            </div>
+            {/* BBB Badge */}
+            <a
+              href="https://www.bbb.org/us/fl/fort-myers/profile/moving-companies/act-of-class-moving-storage-llc-0653-90222874"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-700 transition px-4 py-2.5 rounded-lg"
+            >
+              <div className="flex items-center justify-center w-8 h-8 bg-[#00529b] rounded text-white font-bold text-xs leading-none">
+                BBB
+              </div>
+              <div>
+                <p className="text-white text-xs font-semibold">BBB Accredited</p>
+                <p className="text-gray-400 text-[10px]">Click to verify</p>
+              </div>
+            </a>
           </div>
 
           {/* Quick Links */}
