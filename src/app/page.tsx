@@ -64,17 +64,54 @@ export default function HomePage() {
             Why Choose Act of Class?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { title: "Family-Owned", desc: "Not a franchise — a real family business where your move reflects directly on our name." },
-              { title: "20+ Years Experience", desc: "Two decades of moving families across Southwest Florida with care and professionalism." },
-              { title: "40,000 Sq Ft Storage", desc: "Climate-controlled storage facility to keep your belongings safe between moves." },
-              { title: "BBB Accredited", desc: "Recognized by the Better Business Bureau for our commitment to customer satisfaction." },
-            ].map((item) => (
-              <div key={item.title} className="text-center">
-                <h3 className="font-bold text-dark text-lg mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
+            {/* Family-Owned */}
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-2xl flex items-center justify-center">
+                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955a1.126 1.126 0 011.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                </svg>
               </div>
-            ))}
+              <h3 className="font-bold text-dark text-lg mb-2">Family-Owned</h3>
+              <p className="text-gray-600 text-sm">Not a franchise — a real family business where your move reflects directly on our name.</p>
+            </div>
+
+            {/* 20+ Years Experience */}
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-accent/15 rounded-2xl flex items-center justify-center">
+                <svg className="w-8 h-8 text-accent-dark" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                </svg>
+              </div>
+              <h3 className="font-bold text-dark text-lg mb-2">20+ Years Experience</h3>
+              <p className="text-gray-600 text-sm">Two decades of moving families across Southwest Florida with care and professionalism.</p>
+            </div>
+
+            {/* 40,000 Sq Ft Storage */}
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-2xl flex items-center justify-center">
+                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H2.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+                </svg>
+              </div>
+              <h3 className="font-bold text-dark text-lg mb-2">40,000 Sq Ft Storage</h3>
+              <p className="text-gray-600 text-sm">Climate-controlled storage facility to keep your belongings safe between moves.</p>
+            </div>
+
+            {/* BBB Accredited */}
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 bg-[#00529b]/10 rounded-2xl flex items-center justify-center">
+                <a href="https://www.bbb.org/us/fl/fort-myers/profile/moving-companies/act-of-class-moving-storage-llc-0653-90222874" target="_blank" rel="noopener noreferrer">
+                  <svg className="w-10 h-10" viewBox="0 0 80 80" fill="none">
+                    <rect width="80" height="80" rx="8" fill="#00529b"/>
+                    <text x="50%" y="38%" dominantBaseline="middle" textAnchor="middle" fill="white" fontSize="20" fontWeight="bold" fontFamily="system-ui, sans-serif">BBB</text>
+                    <path d="M20 50 L60 50" stroke="#00529b" strokeWidth="1"/>
+                    <text x="50%" y="66%" dominantBaseline="middle" textAnchor="middle" fill="#f3ca14" fontSize="9" fontWeight="600" fontFamily="system-ui, sans-serif">ACCREDITED</text>
+                  </svg>
+                </a>
+              </div>
+              <h3 className="font-bold text-dark text-lg mb-2">BBB Accredited</h3>
+              <p className="text-gray-600 text-sm">Recognized by the Better Business Bureau for our commitment to customer satisfaction.</p>
+            </div>
           </div>
         </div>
       </section>
