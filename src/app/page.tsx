@@ -89,9 +89,9 @@ export default function HomePage() {
             {/* 40,000 Sq Ft Storage */}
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-2xl flex items-center justify-center">
-                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H2.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
+  <path d="M3 7l9-4 9 4-9 4-9-4zm0 2v8l9 4 9-4V9l-9 4-9-4z"/>
+</svg>
               </div>
               <h3 className="font-bold text-dark text-lg mb-2">40,000 Sq Ft Storage</h3>
               <p className="text-gray-600 text-sm">Climate-controlled storage facility to keep your belongings safe between moves.</p>
