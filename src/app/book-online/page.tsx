@@ -9,20 +9,15 @@ export const metadata: Metadata = {
 
 export default function BookOnlinePage() {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center px-4 py-16 lg:py-24">
-      <div className="w-full max-w-2xl">
-        <div className="text-center mb-10">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-4">
-            Book Your Move
-          </h1>
-          <p className="text-lg text-white/80">
-            Tell us about your move and we&apos;ll provide a detailed, honest quote — no obligation.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-10">
-          <ContactForm />
-        </div>
+    <section className="py-16 lg:py-24 bg-white">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 className="text-3xl sm:text-4xl font-bold text-dark mb-3">
+          Request Your Free Estimate
+        </h1>
+        <p className="text-gray-600 mb-10 text-lg">
+          Tell us about your move and we&apos;ll provide a detailed, honest quote — no obligation.
+        </p>
+        <ContactForm />
       </div>
     </section>
   );
