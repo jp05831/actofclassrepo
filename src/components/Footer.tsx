@@ -72,11 +72,8 @@ export default function Footer() {
                 alt="Act of Class Moving & Storage"
                 width={200}
                 height={67}
-                className="h-14 w-auto mb-2"
+                className="h-14 w-auto"
               />
-              <a href="tel:+12395394761" className="text-white font-bold text-lg hover:text-accent transition">
-                (239) 539-4761
-              </a>
             </div>
 
             <p className="text-sm text-gray-400 mb-4">
@@ -102,6 +99,10 @@ export default function Footer() {
                   {s.icon}
                 </a>
               ))}
+              <div className="h-5 w-px bg-gray-700" />
+              <a href="tel:+12395394761" className="text-white font-bold text-lg hover:text-accent transition whitespace-nowrap">
+                (239) 539-4761
+              </a>
             </div>
 
             {/* BBB Badge */}
