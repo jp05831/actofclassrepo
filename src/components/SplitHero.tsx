@@ -37,7 +37,7 @@ export default function SplitHero({ title, subtitle, image }: SplitHeroProps) {
         </div>
 
         {/* Right side — image flush to edge (~38%) */}
-        <div className="hidden lg:block w-[38%] shrink-0 relative">
+        <div className="hidden lg:block w-[42%] shrink-0 relative">
           {image ? (
             <div
               className="absolute inset-0 bg-cover bg-center"
