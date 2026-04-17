@@ -9,17 +9,67 @@ interface SplitHeroProps {
 export default function SplitHero({ title, subtitle, image }: SplitHeroProps) {
   return (
     <section className="relative bg-gradient-to-br from-primary to-primary-dark text-white overflow-hidden">
-      <div className="flex min-h-[480px] lg:min-h-[540px]">
+      {/* ── Mobile layout: image on top, text below ── */}
+      <div className="flex flex-col lg:hidden">
+        {/* Mobile image banner */}
+        <div className="relative w-full h-[240px] sm:h-[300px]">
+          {image ? (
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${image})` }}
+            />
+          ) : (
+            <div className="absolute inset-0 bg-primary-dark/40" />
+          )}
+          {/* Mobile ribbon — left edge overlay */}
+          <div className="absolute top-0 left-6 h-[60%] z-30">
+            <div className="absolute top-1 left-1 w-[50px] h-full bg-black/15 rounded-b" />
+            <div className="relative w-[50px] h-full bg-accent shadow-lg">
+              <div className="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-accent-light/40 via-transparent to-accent-dark/30" />
+              <div className="absolute -bottom-3 left-0 w-full flex justify-center">
+                <div style={{ width: 0, height: 0, borderLeft: "25px solid transparent", borderRight: "25px solid transparent", borderTop: "10px solid var(--color-accent)" }} />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile text content */}
+        <div className="px-6 sm:px-10 py-10 sm:py-14">
+          <h1 className="text-3xl sm:text-4xl font-bold leading-tight mb-4 drop-shadow-lg">
+            {title}
+          </h1>
+          <p className="text-base sm:text-lg text-white/90 mb-6 leading-relaxed drop-shadow-md">
+            {subtitle}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              href="/book-online"
+              className="inline-flex items-center justify-center bg-white text-primary font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition shadow-lg text-lg"
+            >
+              GET A FREE ESTIMATE
+            </Link>
+            <a
+              href="tel:+12395394761"
+              className="inline-flex items-center justify-center bg-white/10 backdrop-blur text-white font-bold px-8 py-4 rounded-lg hover:bg-white/20 transition border border-white/20 text-lg"
+            >
+              CALL (239) 539-4761
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Desktop layout: side by side (unchanged) ── */}
+      <div className="hidden lg:flex min-h-[480px] lg:min-h-[540px]">
         {/* Left side — content (~60%) */}
-        <div className="flex-1 flex flex-col justify-center px-6 sm:px-10 lg:px-16 xl:px-24 py-16 lg:py-20 relative z-10">
+        <div className="flex-1 flex flex-col justify-center px-16 xl:px-24 py-20 relative z-10">
           <div className="max-w-2xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 drop-shadow-lg">
+            <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6 drop-shadow-lg">
               {title}
             </h1>
-            <p className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed drop-shadow-md">
+            <p className="text-xl text-white/90 mb-8 leading-relaxed drop-shadow-md">
               {subtitle}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-row gap-4">
               <Link
                 href="/book-online"
                 className="inline-flex items-center justify-center bg-white text-primary font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition shadow-lg text-lg"
@@ -36,16 +86,11 @@ export default function SplitHero({ title, subtitle, image }: SplitHeroProps) {
           </div>
         </div>
 
-        {/* Yellow ribbon overlay centered on the split — desktop only */}
-        {/* Layered ribbon overlay */}
-        <div className="hidden lg:block absolute top-0 left-[58%] -translate-x-1/2 h-[60%] z-30">
-          {/* Back shadow layer */}
+        {/* Yellow ribbon overlay centered on the split */}
+        <div className="absolute top-0 left-[58%] -translate-x-1/2 h-[60%] z-30">
           <div className="absolute top-2 left-1.5 w-[80px] h-full bg-black/15 rounded-b" />
-          {/* Main ribbon */}
           <div className="relative w-[80px] h-full bg-accent shadow-lg">
-            {/* Subtle inner highlight */}
             <div className="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-accent-light/40 via-transparent to-accent-dark/30" />
-            {/* Bottom arrow notch */}
             <div className="absolute -bottom-4 left-0 w-full flex justify-center">
               <div style={{ width: 0, height: 0, borderLeft: "40px solid transparent", borderRight: "40px solid transparent", borderTop: "16px solid var(--color-accent)" }} />
             </div>
@@ -53,7 +98,7 @@ export default function SplitHero({ title, subtitle, image }: SplitHeroProps) {
         </div>
 
         {/* Right side — image flush to edge (~42%) */}
-        <div className="hidden lg:block w-[42%] shrink-0 relative">
+        <div className="w-[42%] shrink-0 relative">
           {image ? (
             <div
               className="absolute inset-0 bg-cover bg-center"
