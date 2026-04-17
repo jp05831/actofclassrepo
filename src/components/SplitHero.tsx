@@ -24,7 +24,7 @@ export default function SplitHero({ title, subtitle, image }: SplitHeroProps) {
         </div>
 
         {/* Mobile horizontal ribbon — spans the seam between image and text */}
-        <div className="relative z-30 -mt-[22px] ml-4 sm:ml-8 w-[55%] sm:w-[45%]">
+        <div className="relative z-30 -mt-[22px] w-[55%] sm:w-[45%]">
           <div className="absolute top-1 left-1 h-[44px] w-full bg-black/15 rounded-r" />
           <div className="relative h-[44px] bg-accent shadow-lg">
             <div className="absolute inset-0 bg-gradient-to-r from-accent-light/40 via-transparent to-accent-dark/30" />
