@@ -82,6 +82,7 @@ export const services: Service[] = [
     slug: "local-moving",
     name: "Local Moving",
     shortName: "Local",
+    heroImage: "/images/local-hero.jpg",
     description:
       "Moving across Fort Myers or anywhere in Lee and Collier County? Our local moving services are designed for efficiency and care. We know every neighborhood, every shortcut, and every challenge the Southwest Florida area presents.",
     shortDescription:
@@ -112,6 +113,7 @@ export const services: Service[] = [
     slug: "furniture-movers",
     name: "Furniture Moving",
     shortName: "Furniture",
+    heroImage: "/images/furniture-hero.jpg",
     description:
       "From grand pianos to antique armoires, our specialty furniture movers handle your most valued pieces with expert care. We use professional-grade wrapping, padding, and transport techniques to ensure everything arrives in perfect condition.",
     shortDescription:
@@ -142,6 +144,7 @@ export const services: Service[] = [
     slug: "luxury-moving",
     name: "Luxury Moving",
     shortName: "Luxury",
+    heroImage: "/images/luxury-hero.jpg",
     description:
       "High-end homes deserve high-end moving service. Our luxury moving team specializes in relocating fine art, designer furniture, wine collections, and other premium items with the white-glove treatment they require.",
     shortDescription:
@@ -172,6 +175,7 @@ export const services: Service[] = [
     slug: "senior-moving",
     name: "Senior Moving",
     shortName: "Senior",
+    heroImage: "/images/senior-hero.jpg",
     description:
       "Downsizing or transitioning to a new living arrangement is a big life change. Our senior moving specialists provide patient, compassionate service to make the transition as smooth and stress-free as possible for you and your family.",
     shortDescription:
