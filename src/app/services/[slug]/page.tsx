@@ -34,11 +34,11 @@ export default async function ServicePage({ params }: Props) {
 
   return (
     <>
-      {slug === "residential-moving" ? (
+      {service.heroImage ? (
         <SplitHero
           title={service.name}
           subtitle={service.description}
-          image="/images/residential-hero.jpg"
+          image={service.heroImage}
         />
       ) : (
         <Hero title={service.name} subtitle={service.description} showCTA={true} />

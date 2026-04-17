@@ -5,6 +5,7 @@ export interface Service {
   description: string;
   shortDescription: string;
   icon: string;
+  heroImage?: string;
   features: string[];
   faqs: { question: string; answer: string }[];
 }
@@ -14,6 +15,7 @@ export const services: Service[] = [
     slug: "residential-moving",
     name: "Residential Moving",
     shortName: "Residential",
+    heroImage: "/images/residential-hero.jpg",
     description:
       "Professional residential moving services that take care of everything from start to finish. We handle packing, transport, and setup so you can focus on settling into your new home.",
     shortDescription:
@@ -49,8 +51,9 @@ export const services: Service[] = [
     slug: "apartment-moving",
     name: "Apartment Moving",
     shortName: "Apartment",
+    heroImage: "/images/apartment-hero.jpg",
     description:
-      "Apartment moves come with unique challenges — elevators, narrow hallways, stairs, and building regulations. Our experienced crews know how to navigate these obstacles efficiently while protecting your belongings and the property.",
+      "Apartment moves come with unique challenges like elevators, tight hallways, stairs, and building regulations. Our experienced crews handle every detail efficiently, ensuring your belongings are protected and your move stays smooth from start to finish.",
     shortDescription:
       "Expert apartment movers who handle stairs, elevators, and tight spaces with ease.",
     icon: "🏢",
