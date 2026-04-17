@@ -21,20 +21,22 @@ export default function SplitHero({ title, subtitle, image }: SplitHeroProps) {
           ) : (
             <div className="absolute inset-0 bg-primary-dark/40" />
           )}
-          {/* Mobile ribbon — left edge overlay */}
-          <div className="absolute top-0 left-6 h-[60%] z-30">
-            <div className="absolute top-1 left-1 w-[50px] h-full bg-black/15 rounded-b" />
-            <div className="relative w-[50px] h-full bg-accent shadow-lg">
-              <div className="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-accent-light/40 via-transparent to-accent-dark/30" />
-              <div className="absolute -bottom-3 left-0 w-full flex justify-center">
-                <div style={{ width: 0, height: 0, borderLeft: "25px solid transparent", borderRight: "25px solid transparent", borderTop: "10px solid var(--color-accent)" }} />
-              </div>
+        </div>
+
+        {/* Mobile horizontal ribbon — spans the seam between image and text */}
+        <div className="relative z-30 -mt-[22px] ml-4 sm:ml-8 w-[55%] sm:w-[45%]">
+          <div className="absolute top-1 left-1 h-[44px] w-full bg-black/15 rounded-r" />
+          <div className="relative h-[44px] bg-accent shadow-lg">
+            <div className="absolute inset-0 bg-gradient-to-r from-accent-light/40 via-transparent to-accent-dark/30" />
+            {/* Right arrow notch */}
+            <div className="absolute top-0 -right-[12px] h-full flex items-center">
+              <div style={{ width: 0, height: 0, borderTop: "22px solid transparent", borderBottom: "22px solid transparent", borderLeft: "12px solid var(--color-accent)" }} />
             </div>
           </div>
         </div>
 
         {/* Mobile text content */}
-        <div className="px-6 sm:px-10 py-10 sm:py-14">
+        <div className="px-6 sm:px-10 py-8 sm:py-12">
           <h1 className="text-3xl sm:text-4xl font-bold leading-tight mb-4 drop-shadow-lg">
             {title}
           </h1>
