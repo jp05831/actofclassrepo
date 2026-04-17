@@ -9,10 +9,10 @@ interface SplitHeroProps {
 export default function SplitHero({ title, subtitle, image }: SplitHeroProps) {
   return (
     <section className="relative bg-gradient-to-br from-primary to-primary-dark text-white overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex min-h-[480px] lg:min-h-[540px]">
-          {/* Left side — content (roughly 60%) */}
-          <div className="flex-1 flex flex-col justify-center px-6 sm:px-10 lg:px-16 py-16 lg:py-20 max-w-2xl relative z-10">
+      <div className="flex min-h-[480px] lg:min-h-[540px]">
+        {/* Left side — content (~60%) */}
+        <div className="flex-1 flex flex-col justify-center px-6 sm:px-10 lg:px-16 xl:px-24 py-16 lg:py-20 relative z-10">
+          <div className="max-w-2xl">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 drop-shadow-lg">
               {title}
             </h1>
@@ -34,20 +34,20 @@ export default function SplitHero({ title, subtitle, image }: SplitHeroProps) {
               </a>
             </div>
           </div>
+        </div>
 
-          {/* Right side — image (roughly 35-40%) */}
-          <div className="hidden lg:block w-[38%] shrink-0 relative">
-            {image ? (
-              <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url(${image})` }}
-              />
-            ) : (
-              <div className="absolute inset-0 bg-primary-dark/40 flex items-center justify-center">
-                <p className="text-white/30 text-sm font-medium">Image coming soon</p>
-              </div>
-            )}
-          </div>
+        {/* Right side — image flush to edge (~38%) */}
+        <div className="hidden lg:block w-[38%] shrink-0 relative">
+          {image ? (
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${image})` }}
+            />
+          ) : (
+            <div className="absolute inset-0 bg-primary-dark/40 flex items-center justify-center">
+              <p className="text-white/30 text-sm font-medium">Image coming soon</p>
+            </div>
+          )}
         </div>
       </div>
     </section>
