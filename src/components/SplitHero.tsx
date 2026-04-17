@@ -36,7 +36,10 @@ export default function SplitHero({ title, subtitle, image }: SplitHeroProps) {
           </div>
         </div>
 
-        {/* Right side — image flush to edge (~38%) */}
+        {/* Yellow ribbon overlay centered on the split — desktop only */}
+        <div className="hidden lg:block absolute top-0 left-[58%] -translate-x-1/2 w-[6px] h-[70%] bg-accent z-30" />
+
+        {/* Right side — image flush to edge (~42%) */}
         <div className="hidden lg:block w-[42%] shrink-0 relative">
           {image ? (
             <div
