@@ -66,22 +66,21 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             {/* Logo + Phone */}
-            <div className="flex items-center gap-3 mb-4">
+            <div className="mb-4">
               <Image
-                src="/images/logo.png"
+                src="/images/logo-footer.jpg"
                 alt="Act of Class Moving & Storage"
-                width={180}
-                height={60}
-                className="h-12 lg:h-14 w-auto"
+                width={200}
+                height={67}
+                className="h-14 w-auto mb-2"
               />
-              <div className="h-10 w-px bg-gray-700" />
-              <a href="tel:+12395394761" className="text-white font-bold text-lg hover:text-accent transition whitespace-nowrap">
+              <a href="tel:+12395394761" className="text-white font-bold text-lg hover:text-accent transition">
                 (239) 539-4761
               </a>
             </div>
 
             <p className="text-sm text-gray-400 mb-4">
-              Family-owned and operated for over 20 years. BBB accredited. Serving Fort Myers and all of Southwest Florida.
+              Family-owned moving company with over 20 years of experience. Licensed and insured. Serving Southwest Florida.
             </p>
 
             <div className="space-y-1.5 text-sm text-gray-400 mb-4">
