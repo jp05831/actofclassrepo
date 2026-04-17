@@ -35,10 +35,9 @@ export default function SplitHero({ title, subtitle, image }: SplitHeroProps) {
             </div>
           </div>
 
-          {/* Ribbon divider */}
-          <div className="hidden lg:flex flex-col items-center w-3 relative z-10 shrink-0">
-            <div className="w-full h-full bg-accent" />
-          </div>
+          {/* Ribbon divider — desktop only */}
+          <div className="hidden lg:block absolute right-[48%] top-0 w-[90px] h-[63%] bg-accent/60 z-20" />
+          <div className="hidden lg:block absolute top-[60%] w-[55px] h-[28px] bg-accent/60 z-20" style={{ right: "calc(48% + 17px)" }} />
 
           {/* Right side — image (roughly 40%) */}
           <div className="hidden lg:block w-[38%] shrink-0 relative">
