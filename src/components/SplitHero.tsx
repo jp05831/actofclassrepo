@@ -37,7 +37,20 @@ export default function SplitHero({ title, subtitle, image }: SplitHeroProps) {
         </div>
 
         {/* Yellow ribbon overlay centered on the split — desktop only */}
-        <div className="hidden lg:block absolute top-0 left-[58%] -translate-x-1/2 w-[80px] h-[70%] bg-accent z-30" />
+        {/* Layered ribbon overlay */}
+        <div className="hidden lg:block absolute top-0 left-[58%] -translate-x-1/2 h-[60%] z-30">
+          {/* Back shadow layer */}
+          <div className="absolute top-2 left-1.5 w-[80px] h-full bg-black/15 rounded-b" />
+          {/* Main ribbon */}
+          <div className="relative w-[80px] h-full bg-accent shadow-lg">
+            {/* Subtle inner highlight */}
+            <div className="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-accent-light/40 via-transparent to-accent-dark/30" />
+            {/* Bottom arrow notch */}
+            <div className="absolute -bottom-4 left-0 w-full flex justify-center">
+              <div style={{ width: 0, height: 0, borderLeft: "40px solid transparent", borderRight: "40px solid transparent", borderTop: "16px solid var(--color-accent)" }} />
+            </div>
+          </div>
+        </div>
 
         {/* Right side — image flush to edge (~42%) */}
         <div className="hidden lg:block w-[42%] shrink-0 relative">
