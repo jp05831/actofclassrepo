@@ -15,7 +15,7 @@ export const services: Service[] = [
     name: "Residential Moving",
     shortName: "Residential",
     description:
-      "Whether you're moving from a cozy bungalow or a sprawling estate, our residential moving services cover every detail. We handle packing, loading, transport, and setup so you can focus on settling into your new home.",
+      "Professional residential moving services that take care of everything from start to finish. We handle packing, transport, and setup so you can focus on settling into your new home.",
     shortDescription:
       "Complete home moving services with packing, loading, and careful transport of all your belongings.",
     icon: "🏠",

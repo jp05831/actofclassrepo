@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Hero from "@/components/Hero";
+import SplitHero from "@/components/SplitHero";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
 import { services, getService } from "@/data/services";
@@ -33,7 +34,15 @@ export default async function ServicePage({ params }: Props) {
 
   return (
     <>
-      <Hero title={service.name} subtitle={service.description} showCTA={true} />
+      {slug === "residential-moving" ? (
+        <SplitHero
+          title={service.name}
+          subtitle={service.description}
+          image="/images/residential-hero.jpg"
+        />
+      ) : (
+        <Hero title={service.name} subtitle={service.description} showCTA={true} />
+      )}
 
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
