@@ -250,7 +250,7 @@ export default function EstimateWizard() {
                         key={day}
                         onClick={() => selectDay(day)}
                         disabled={isPast(day)}
-                        className={`w-[34px] h-[30px] text-[11px] rounded transition font-medium mx-auto ${
+                        className={`w-[34px] h-[26px] text-[11px] rounded transition font-medium mx-auto ${
                           isSelected(day)
                             ? "bg-primary text-white"
                             : isPast(day)
