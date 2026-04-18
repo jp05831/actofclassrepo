@@ -88,7 +88,7 @@ export default function EstimateWizard() {
 
   if (submitting) {
     return (
-      <div className="bg-white rounded-2xl shadow-xl border border-gray-200 -mt-8 relative z-10 max-w-2xl mx-auto overflow-hidden">
+      <div className="bg-white rounded-2xl shadow-xl border border-gray-200 -mt-8 relative z-10 max-w-2xl mx-auto overflow-hidden min-w-0" style={{ width: "580px", maxWidth: "100%" }}>
         <div className="flex flex-col items-center justify-center py-16">
           <div className="animate-bounce-slow mb-4">
             <svg viewBox="0 0 128 80" className="w-28 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -109,7 +109,7 @@ export default function EstimateWizard() {
 
   if (submitted) {
     return (
-      <div className="bg-white rounded-2xl shadow-xl border border-gray-200 -mt-8 relative z-10 max-w-2xl mx-auto overflow-hidden">
+      <div className="bg-white rounded-2xl shadow-xl border border-gray-200 -mt-8 relative z-10 max-w-2xl mx-auto overflow-hidden min-w-0" style={{ width: "580px", maxWidth: "100%" }}>
         <div className="flex flex-col items-center justify-center py-14 px-6">
           <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-5">
             <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -130,7 +130,7 @@ export default function EstimateWizard() {
     : "";
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl border border-gray-200 -mt-8 relative z-10 max-w-2xl mx-auto overflow-hidden">
+    <div className="bg-white rounded-2xl shadow-xl border border-gray-200 -mt-8 relative z-10 max-w-2xl mx-auto overflow-hidden min-w-0" style={{ width: "580px", maxWidth: "100%" }}>
       {/* Header */}
       <div className="bg-primary px-6 py-4">
         <div className="flex items-center justify-between">
@@ -153,7 +153,7 @@ export default function EstimateWizard() {
       </div>
 
       <div className="p-6 lg:p-8">
-        <p className="text-gray-400 text-sm mb-6">Tell us a few details to get started.</p>
+        <p className="text-gray-400 text-sm font-bold mb-6">Tell us a few details to get started.</p>
 
         <div className="space-y-4">
           {/* Zip codes */}
@@ -221,7 +221,7 @@ export default function EstimateWizard() {
 
             {/* Compact calendar dropdown */}
             {showCalendar && (
-              <div className="absolute top-full left-0 z-50 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg p-3 w-[260px]">
+              <div className="absolute top-full left-0 z-50 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg p-3 w-[280px]">
                 <div className="flex items-center justify-between mb-2">
                   <button type="button" onClick={prevMonth} disabled={!canGoBack} className="p-0.5 hover:bg-gray-100 rounded disabled:opacity-30 transition">
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
