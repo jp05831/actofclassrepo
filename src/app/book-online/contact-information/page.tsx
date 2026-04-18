@@ -157,7 +157,7 @@ export default function ContactInfoPage() {
               className="w-4 h-4 mt-0.5 rounded border-gray-300 text-primary focus:ring-primary/30 accent-primary"
             />
             <span className="text-sm text-gray-600">
-              You may send me messages via text related to the services. I understand that I can unsubscribe anytime.
+              You may call or send me messages related to my service request. I understand that I can unsubscribe at any time.
             </span>
           </label>
         </div>
