@@ -219,28 +219,28 @@ export default function EstimateWizard() {
               <p className="text-red-500 text-xs mt-1">Please select a date</p>
             )}
 
-            {/* Calendar dropdown */}
+            {/* Compact calendar dropdown */}
             {showCalendar && (
-              <div className="absolute top-full left-0 right-0 z-50 mt-1 bg-white border border-gray-200 rounded-xl shadow-lg p-4">
-                <div className="flex items-center justify-between mb-3">
-                  <button type="button" onClick={prevMonth} disabled={!canGoBack} className="p-1 hover:bg-gray-100 rounded-lg disabled:opacity-30 transition">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="absolute top-full left-0 z-50 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg p-3 w-[260px]">
+                <div className="flex items-center justify-between mb-2">
+                  <button type="button" onClick={prevMonth} disabled={!canGoBack} className="p-0.5 hover:bg-gray-100 rounded disabled:opacity-30 transition">
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                     </svg>
                   </button>
-                  <span className="font-semibold text-dark text-sm">{MONTH_NAMES[viewMonth]} {viewYear}</span>
-                  <button type="button" onClick={nextMonth} className="p-1 hover:bg-gray-100 rounded-lg transition">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span className="font-semibold text-dark text-xs">{MONTH_NAMES[viewMonth]} {viewYear}</span>
+                  <button type="button" onClick={nextMonth} className="p-0.5 hover:bg-gray-100 rounded transition">
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </button>
                 </div>
-                <div className="grid grid-cols-7 gap-0.5 mb-1">
+                <div className="grid grid-cols-7 mb-0.5">
                   {DAY_NAMES.map((d) => (
-                    <div key={d} className="text-center text-[10px] font-medium text-gray-400 py-1">{d}</div>
+                    <div key={d} className="text-center text-[9px] font-medium text-gray-400 py-0.5">{d.charAt(0)}</div>
                   ))}
                 </div>
-                <div className="grid grid-cols-7 gap-0.5">
+                <div className="grid grid-cols-7">
                   {days.map((day, i) =>
                     day === null ? (
                       <div key={`e-${i}`} />
@@ -250,7 +250,7 @@ export default function EstimateWizard() {
                         key={day}
                         onClick={() => selectDay(day)}
                         disabled={isPast(day)}
-                        className={`py-1.5 text-xs rounded-lg transition font-medium ${
+                        className={`w-[34px] h-[30px] text-[11px] rounded transition font-medium mx-auto ${
                           isSelected(day)
                             ? "bg-primary text-white"
                             : isPast(day)
