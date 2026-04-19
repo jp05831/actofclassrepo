@@ -41,7 +41,8 @@ export default function ContactInfoPage() {
     data.firstName.trim() &&
     data.lastName.trim() &&
     phoneValid &&
-    emailValid;
+    emailValid &&
+    data.optInTexts;
 
   const handleNext = () => {
     setTouched({ firstName: true, lastName: true, phone: true, email: true });

@@ -206,7 +206,12 @@ export default function HomePage() {
                 Call (239) 539-4761
               </a>
               <span className="text-gray-400">or</span>
-              <ScrollToTopButton />
+              <a
+                href="/book-online"
+                className="inline-flex items-center justify-center bg-accent text-dark font-bold px-8 py-4 rounded-lg hover:bg-accent-dark transition shadow-sm text-lg"
+              >
+                GET YOUR FREE ESTIMATE
+              </a>
             </div>
             <div className="mt-8 text-sm text-gray-500">
               <p>2775 N Airport Rd #109, Fort Myers, FL 33907</p>

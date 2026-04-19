@@ -54,20 +54,7 @@ export default function ConfirmationPage() {
               <span className="text-sm font-medium text-dark">{data.phone}</span>
             </div>
           )}
-          {data.moveDate && (
-            <div className="flex justify-between">
-              <span className="text-sm text-gray-500">Move Date</span>
-              <span className="text-sm font-medium text-dark">
-                {new Date(data.moveDate + "T12:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
-              </span>
-            </div>
-          )}
-          {data.propertyType && (
-            <div className="flex justify-between">
-              <span className="text-sm text-gray-500">Property Type</span>
-              <span className="text-sm font-medium text-dark capitalize">{data.propertyType}</span>
-            </div>
-          )}
+{/* Only showing service address and phone */}
         </div>
       </div>
 

@@ -74,7 +74,7 @@ export default function EstimateWizard() {
   const phoneValid = isValidPhone(phone);
   const fromZipValid = isValidZip(fromZip);
   const toZipValid = isValidZip(toZip);
-  const canSubmit = fromZipValid && toZipValid && moveDate && phoneValid;
+  const canSubmit = fromZipValid && toZipValid && moveDate && phoneValid && consent;
 
   const handleSubmit = () => {
     setTouched({ fromZip: true, toZip: true, moveDate: true, phone: true });
